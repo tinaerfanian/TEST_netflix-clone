@@ -1,21 +1,25 @@
 import './App.css';
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Navbar from './components/Navbar';
-import Movies from './components/Movies';
+
 import Footer from './components/Footer';
+import MovieGallery from './components/Movies';
 
 const App = () => {
   return (
     <div className="bg-dark text-light">
-      <Navbar />
-      <div className="container">
-        <Movies title="Harry Potter Saga" searchQuery="Harry Potter" />
-        <Movies title="Lord of the Rings Saga" searchQuery="Lord of the Rings" />
-        <Movies title="Marvel Cinematic Universe" searchQuery="Marvel" />
-      </div>
-      <Footer />
+    <Navbar />
+    <div className="container">
+    <MovieGallery   film={'Harry potter'} />
+    <MovieGallery  film={'Godfather'}/>
+    <MovieGallery film={'Lord of the rings'}/>
+    <MovieGallery  film={'Marvel'}/>
+
+     
     </div>
+    <Footer />
+  </div>
   );
 };
 
